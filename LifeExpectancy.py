@@ -1,6 +1,6 @@
 #This is an application I created to show a user their age on multiple planets based on the parameters I set.
 #Importing random to show application functions without manually entering info. 
-#I also added print statements at the bottom of the page to take these random values anr return the age on each planet.
+#I also added print statements at the bottom of the page to take these random values and return the age on each planet.
 import random
 
 class LifeExpectancyAverage:
@@ -126,3 +126,17 @@ print("Age on Jupiter:", jupiterLifeExpectancy.ageOnJupiter)
 print("Age on Mars:", marsLifeExpectancy.ageOnMars)
 print("Age on Mercury:", mercuryLifeExpectancy.ageOnMercury)
 print("Age on Venus:", venusLifeExpectancy.ageOnVenus)
+
+print("")
+
+jupiterLifeExpectancy.surpassedLifeExpectancy(lifeExpectancyAverage.lifeExpectancyAverage)
+print(f'This person born on Jupiter surpassed their life expectancy by {jupiterLifeExpectancy.differenceInAge} years')
+
+marsLifeExpectancy.surpassedLifeExpectancy(lifeExpectancyAverage.lifeExpectancyAverage)
+print(f'This person born on Mars surpassed their life expectancy by {marsLifeExpectancy.differenceInAge} years')
+
+mercuryLifeExpectancy.surpassedLifeExpectancy(lifeExpectancyAverage.lifeExpectancyAverage)
+print(f'This person born on Mercury surpassed their life expectancy by {mercuryLifeExpectancy.differenceInAge} years')
+
+venusLifeExpectancy.surpassedLifeExpectancy(lifeExpectancyAverage.lifeExpectancyAverage)
+print(f'This person born on Venus surpassed their life expectancy by {venusLifeExpectancy.differenceInAge} years')
