@@ -1,6 +1,3 @@
-#This is an application I created to show a user their age on multiple planets based on the parameters I set.
-#Importing random to show application functions without manually entering info. 
-#I also added print statements at the bottom of the page to take these random values anr return the age on each planet.
 import random
 
 class LifeExpectancyAverage:
@@ -68,7 +65,7 @@ class MercuryLifeExpectancy:
         self.surpassedExpect = 0
 
     def mercuryAgeCalc (self):
-        self.ageOnMercury = round(self.ageOnEarth / self.mercuryYear)
+        self.ageOnMercury = round(self.ageOnEarth / self.meruryYear)
 
     def surpassedLifeExpectancy(self, LifeExpectancyAverage):
         self.differenceInAge = round(abs(LifeExpectancyAverage - self.ageOnMercury))

@@ -1,3 +1,36 @@
+import random
+
+# create a random age on Earth
+ageOnEarth = random.randint(1, 100)
+
+# create a random value for whether the person was born on Earth
+bornOnEarth = random.choice([True, False])
+
+# create a random value for whether the person is human
+humanSpecies = random.choice([True, False])
+
+# create a random value for the person's sex
+sex = random.choice(["male", "female"])
+
+# create an instance of the LifeExpectancyAverage class
+lifeExpectancyAverage = LifeExpectancyAverage(bornOnEarth, humanSpecies, sex)
+
+# create an instance of the JupiterLifeExpectancy class
+jupiterLifeExpectancy = JupiterLifeExpectancy(ageOnEarth)
+jupiterLifeExpectancy.jupiterAgeCalc()
+
+# create an instance of the MarsLifeExpectancy class
+marsLifeExpectancy = MarsLifeExpectancy(ageOnEarth)
+marsLifeExpectancy.marsAgeCalc()
+
+# create an instance of the MercuryLifeExpectancy class
+mercuryLifeExpectancy = MercuryLifeExpectancy(ageOnEarth)
+mercuryLifeExpectancy.mercuryAgeCalc()
+
+# create an instance of the VenusLifeExpectancy class
+venusLifeExpectancy = VenusLifeExpectancy(ageOnEarth)
+venusLifeExpectancy.venusAgeCalc()
+
 class LifeExpectancyAverage:
     def __init__(self, bornOnEarth, humanSpecies, sex):
         self.bornOnEarth = bornOnEarth
@@ -16,7 +49,7 @@ class LifeExpectancyAverage:
         else:
             initialAge -= 5
 
-        if self.sex is "female":
+        if self.sex == "female":
             initialAge += 7
         else:
             initialAge += 1
@@ -72,7 +105,20 @@ class MercuryLifeExpectancy:
 class VenusLifeExpectancy:
     def __init__ (self, ageOnEarth):
         self.ageOnEarth = ageOnEarth
-        self.ageOnMercury = 0
-        self.mercuryYear = 0.24
+        self.ageOnVenus = 0
+        self.venusYear = 0.62
         self.surpassedExpect = 0
 
+    def venusAgeCalc (self):
+        self.ageOnVenus = round(self.ageOnEarth / self.venusYear)
+
+    def surpassedLifeExpectancy(self, LifeExpectancyAverage):
+        self.differenceInAge = round(abs(LifeExpectancyAverage - self.ageOnVenus))
+
+
+# print the age on each planet
+print("Age on Earth:", ageOnEarth)
+print("Age on Jupiter:", jupiterLifeExpectancy.ageOnJupiter)
+print("Age on Mars:", marsLifeExpectancy.ageOnMars)
+print("Age on Mercury:", mercuryLifeExpectancy.ageOnMercury)
+print("Age on Venus:", venusLifeExpectancy.ageOnVenus)
