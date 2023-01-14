@@ -1,4 +1,4 @@
-#This is an application I created to show a user their age on multiple planets based on the parameters I set.
+#This project is designed to determine a user's life expectancy on different planets, including Jupiter, Mars, Mercury, and Venus. It also calculates whether the user has exceeded the average life expectancy on the planet they have selected.
 #Importing random to show application functions without manually entering info. 
 #I also added print statements at the bottom of the page to take these random values and return the age on each planet.
 import random
@@ -103,40 +103,45 @@ sex = random.choice(["male", "female"])
 # create an instance of the LifeExpectancyAverage class
 lifeExpectancyAverage = LifeExpectancyAverage(bornOnEarth, humanSpecies, sex)
 
+#Print the age of this instanced person (based on random parameters)
+
+print("Life Expectancy outcomes based on a randomized person:")
+print("")
+
 # create an instance of the JupiterLifeExpectancy class
 jupiterLifeExpectancy = JupiterLifeExpectancy(ageOnEarth)
 jupiterLifeExpectancy.jupiterAgeCalc()
+jupiterLifeExpectancy.surpassedLifeExpectancy(lifeExpectancyAverage.lifeExpectancyAverage)
+print("This person born on Jupiter surpassed their life expectancy by", jupiterLifeExpectancy.differenceInAge,"years")
 
 # create an instance of the MarsLifeExpectancy class
 marsLifeExpectancy = MarsLifeExpectancy(ageOnEarth)
 marsLifeExpectancy.marsAgeCalc()
+marsLifeExpectancy.surpassedLifeExpectancy(lifeExpectancyAverage.lifeExpectancyAverage)
+print("This person born on Mars surpassed their life expectancy by", marsLifeExpectancy.differenceInAge,"years")
 
 # create an instance of the MercuryLifeExpectancy class
 mercuryLifeExpectancy = MercuryLifeExpectancy(ageOnEarth)
 mercuryLifeExpectancy.mercuryAgeCalc()
+mercuryLifeExpectancy.surpassedLifeExpectancy(lifeExpectancyAverage.lifeExpectancyAverage)
+print("This person born on Mercury surpassed their life expectancy by", mercuryLifeExpectancy.differenceInAge,"years")
 
 # create an instance of the VenusLifeExpectancy class
 venusLifeExpectancy = VenusLifeExpectancy(ageOnEarth)
 venusLifeExpectancy.venusAgeCalc()
+venusLifeExpectancy.surpassedLifeExpectancy(lifeExpectancyAverage.lifeExpectancyAverage)
+print("This person born on Venus surpassed their life expectancy by", venusLifeExpectancy.differenceInAge,"years")
 
+print("")
 
-# print the age on each planet
 print("Age on Earth:", ageOnEarth)
+
+print("")
+
+print("Age on each planet in Earth years:")
+
+# print the rounded age on each planet in Earth Years
 print("Age on Jupiter:", jupiterLifeExpectancy.ageOnJupiter)
 print("Age on Mars:", marsLifeExpectancy.ageOnMars)
 print("Age on Mercury:", mercuryLifeExpectancy.ageOnMercury)
 print("Age on Venus:", venusLifeExpectancy.ageOnVenus)
-
-print("")
-
-jupiterLifeExpectancy.surpassedLifeExpectancy(lifeExpectancyAverage.lifeExpectancyAverage)
-print(f'This person born on Jupiter surpassed their life expectancy by {jupiterLifeExpectancy.differenceInAge} years')
-
-marsLifeExpectancy.surpassedLifeExpectancy(lifeExpectancyAverage.lifeExpectancyAverage)
-print(f'This person born on Mars surpassed their life expectancy by {marsLifeExpectancy.differenceInAge} years')
-
-mercuryLifeExpectancy.surpassedLifeExpectancy(lifeExpectancyAverage.lifeExpectancyAverage)
-print(f'This person born on Mercury surpassed their life expectancy by {mercuryLifeExpectancy.differenceInAge} years')
-
-venusLifeExpectancy.surpassedLifeExpectancy(lifeExpectancyAverage.lifeExpectancyAverage)
-print(f'This person born on Venus surpassed their life expectancy by {venusLifeExpectancy.differenceInAge} years')
