@@ -2,7 +2,7 @@
 
 #### By _**Sean Keane**_
 
-#### Intro to Python Code Review 1/13/2023
+#### CS1100 Python Code Review 1/13/2023
 
 #### Live Replit [link](https://replit.com/join/lalbklquyw-canadianrunner)
 
@@ -11,7 +11,7 @@
 * Python
 
 ## Description
-_This is a project I created at Sophia that allows the user to determine  their life expectancy on different planets, including Jupiter, Mars, Mercury, and Venus. It also calculates whether the user has exceeded the average life expectancy on the planet they have selected.  Developing this application helped grow my understanding of python.  In it's current configuration when you run the application you will create a randomized person.  You can replace the random details by removing lines 91-104 and inputing your characteristics._
+_This is a project I created for CS1100 that allows the user to determine  their life expectancy on different planets, including Jupiter, Mars, Mercury, and Venus. It also calculates whether the user has exceeded the average life expectancy on the planet they have selected.  Developing this application helped grow my understanding of python.  In it's current configuration when you run the application you will create a randomized person.  You can replace the random details by removing lines 91-104 and inputing your characteristics._
 
 
 ## Setup/Installation Requirements
