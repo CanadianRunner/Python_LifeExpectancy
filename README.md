@@ -1,4 +1,4 @@
-# Python_LifeExpectancy Calculator
+# Python Life Expectancy Calculator
 
 #### By _**Sean Keane**_
 
